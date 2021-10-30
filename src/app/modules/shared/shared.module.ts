@@ -6,12 +6,14 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { MatRippleModule } from '@angular/material/core';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { DatePresentationPipe } from './pipes/date-presentation.pipe';
 
 @NgModule({
   declarations: [
     MainLayoutComponent,
     NavbarComponent,
     NotFoundComponent,
+    DatePresentationPipe,
   ],
   imports: [
     CommonModule,
@@ -19,6 +21,9 @@ import { HttpClientModule } from '@angular/common/http';
     RouterModule,
     HttpClientModule,
   ],
-  exports: [MainLayoutComponent]
+  exports: [
+    MainLayoutComponent,
+    DatePresentationPipe,
+  ]
 })
 export class SharedModule { }

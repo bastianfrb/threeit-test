@@ -7,4 +7,8 @@
 
         <span *ngIf="indicator.unidad_medida === 'Porcentaje'">%</span>
     </div>
+
+    <div class="indicator-chart">
+        <app-indicator-detail-chart [indicator]="indicator"></app-indicator-detail-chart>
+    </div>
 </div>

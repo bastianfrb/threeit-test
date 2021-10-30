@@ -8,6 +8,8 @@ import { IndicatorOptionComponent } from './components/indicator-option/indicato
 import { MatCardModule } from '@angular/material/card';
 import { IndicatorRoutingModule } from './indicator-routing.module';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { SharedModule } from '../shared/shared.module';
+import { HighchartsChartModule } from 'highcharts-angular';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MatCardModule,
     IndicatorRoutingModule,
     MatProgressSpinnerModule,
+    SharedModule,
+    HighchartsChartModule,
   ],
 })
 export class IndicatorModule { }

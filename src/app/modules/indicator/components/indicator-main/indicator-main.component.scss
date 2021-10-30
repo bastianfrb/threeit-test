@@ -3,6 +3,8 @@
 .indicator-main {
     background: $turquoise1;
     min-height: $content-height;
+    max-height: $content-height;
+    overflow-y: auto;
 
     .indicators-content {
         flex-wrap: wrap;

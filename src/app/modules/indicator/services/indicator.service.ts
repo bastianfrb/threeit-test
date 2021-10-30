@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { CommunicationService } from '../../shared/services/communication.service';
-import { IIndicatorObject } from '../interfaces/indicators';
+import { IIndicatorDetail, IIndicatorObject } from '../interfaces/indicators';
 import { IIndicator } from '../interfaces/indicators';
 
 @Injectable({
@@ -47,7 +47,7 @@ export class IndicatorService {
   /**
    * Function to get last 10 days of an indicator
    */
-   public getIndicatorDetail(indicator: string): Promise<IIndicatorObject> {
+   public getIndicatorDetail(indicator: string): Promise<IIndicatorDetail> {
     const url = `https://mindicador.cl/api/${indicator}`;
 
     return this.communicationService.get(url).toPromise().catch((error) => {
