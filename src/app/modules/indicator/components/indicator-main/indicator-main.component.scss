@@ -2,5 +2,16 @@
 
 .indicator-main {
     background: $turquoise1;
-    height: $content-height;
+    min-height: $content-height;
+
+    .indicators-content {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+
+        .indicator-card {
+            margin-bottom: 20px;
+            width: 30%;
+        }
+    }
 }

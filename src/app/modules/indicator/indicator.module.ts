@@ -7,6 +7,7 @@ import { IndicatorMainComponent } from './components/indicator-main/indicator-ma
 import { IndicatorOptionComponent } from './components/indicator-option/indicator-option.component';
 import { MatCardModule } from '@angular/material/card';
 import { IndicatorRoutingModule } from './indicator-routing.module';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { IndicatorRoutingModule } from './indicator-routing.module';
     CommonModule,
     MatCardModule,
     IndicatorRoutingModule,
+    MatProgressSpinnerModule,
   ],
 })
 export class IndicatorModule { }

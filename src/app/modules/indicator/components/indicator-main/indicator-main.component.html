@@ -3,7 +3,27 @@
         Indicadores
     </div>
 
-    <mat-card *ngFor="let indicator of indicators">
+    <div class="indicators-content flex-row">
+        <mat-card class="indicator-card" *ngFor="let indicator of indicators.data">
+            <mat-card-header>
+                <mat-card-title>
+                    {{ indicator.nombre }}
+                </mat-card-title>
+    
+                <mat-card-subtitle>
+                    en {{ indicator.unidad_medida }}
+                </mat-card-subtitle>
+            </mat-card-header>
+            
+            <div class="indicator-info">
+                <ng-container *ngIf="indicator.detail">
+                    <app-indicator-detail [indicator]="indicator.detail"></app-indicator-detail>
+                </ng-container>
 
-    </mat-card>
+                <ng-container *ngIf="!indicator.detail">
+                    <mat-spinner></mat-spinner>
+                </ng-container>
+            </div>
+        </mat-card>
+    </div>
 </div>

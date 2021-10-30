@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CommunicationService } from 'src/app/modules/shared/services/communication.service';
-import { IIndicatorResponse } from '../../interfaces/IIndicator';
+import { IIndicatorObject } from '../../interfaces/indicators';
 import { IndicatorService } from '../../services/indicator.service';
 
 @Component({
@@ -10,10 +9,12 @@ import { IndicatorService } from '../../services/indicator.service';
 })
 export class IndicatorMainComponent implements OnInit {
 
-  public indicators: IIndicatorResponse[];
+  public indicators: IIndicatorObject;
 
   constructor(private indicatorService: IndicatorService) {
-    this.indicators = [];
+    this.indicators = {
+      data: [],
+    };
   }
 
   ngOnInit(): void {
@@ -23,8 +24,21 @@ export class IndicatorMainComponent implements OnInit {
   /**
    * Function to get the current indicators
    */
-  public getCurrentIndicators(): void {
-    this.indicatorService.getCurrentIndicators();
+  public async getCurrentIndicators(): Promise<void> {
+    this.indicators = await this.indicatorService.getCurrentIndicators();
+
+    for (const indicator of this.indicators.data) {
+      indicator.detail = await this.setDetailIndicator(indicator.codigo);
+
+      console.log(indicator.detail);
+    }
+  }
+
+  /**
+   * Function to assign detail indicator to indicatorObject
+   */
+  private setDetailIndicator(indicatorCode: string): Promise<any> {
+    return this.indicatorService.getIndicatorDetail(indicatorCode);
   }
 
 }
