@@ -5,8 +5,8 @@ import { IndicatorDetailChartComponent } from './components/indicator-detail-cha
 import { IndicatorLastDaysComponent } from './components/indicator-last-days/indicator-last-days.component';
 import { IndicatorMainComponent } from './components/indicator-main/indicator-main.component';
 import { IndicatorOptionComponent } from './components/indicator-option/indicator-option.component';
-
-
+import { MatCardModule } from '@angular/material/card';
+import { IndicatorRoutingModule } from './indicator-routing.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +17,9 @@ import { IndicatorOptionComponent } from './components/indicator-option/indicato
     IndicatorOptionComponent
   ],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+    MatCardModule,
+    IndicatorRoutingModule,
+  ],
 })
 export class IndicatorModule { }
