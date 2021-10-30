@@ -7,6 +7,7 @@ To download this project and test it, please go to the target folder and clone t
 > git clone https://github.com/bastianfrb/threeit-test.git
 
 in your command line, targeting the folder.
+Be sure you are on version 12 for Angular.
 
 ## Stack
 - Angular 12
