@@ -4,7 +4,7 @@
             <span *ngIf="indicator.unidad_medida === 'Pesos'">$</span>
             <span *ngIf="indicator.unidad_medida === 'Dólar'">US$</span>
 
-            {{ indicator.serie[0].valor }}
+            {{ indicator.serie[0]?.valor }}
 
             <span *ngIf="indicator.unidad_medida === 'Porcentaje'">%</span>
         </div>

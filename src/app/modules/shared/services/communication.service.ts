@@ -7,21 +7,12 @@ import { Observable } from 'rxjs';
 })
 export class CommunicationService {
 
-
-  constructor(private http: HttpClient) {
-  }
+  constructor(private http: HttpClient) {}
 
   /**
    * Function to do a GET request
    */
   public get(url: string, params?: any): Observable<any> {
     return this.http.get(url, params);
-  }
-
-  /**
-   * Function to do a POST request
-   */
-   public post(url: string, params: any): Observable<any> {
-    return this.http.post(url, params);
   }
 }
