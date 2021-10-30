@@ -3,6 +3,10 @@
 ## Introduction
 
 This is a custom test project made for 3it selection.
+To download this project and test it, please go to the target folder and clone this repository using:
+> git clone https://github.com/bastianfrb/threeit-test.git
+
+in your command line, targeting the folder.
 
 ## Stack
 - Angular 12
