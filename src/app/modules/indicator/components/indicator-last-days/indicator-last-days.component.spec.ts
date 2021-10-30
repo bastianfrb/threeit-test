@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { IndicatorModule } from '../../indicator.module';
 
 import { IndicatorLastDaysComponent } from './indicator-last-days.component';
 
@@ -8,7 +9,8 @@ describe('IndicatorLastDaysComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ IndicatorLastDaysComponent ]
+      declarations: [ IndicatorLastDaysComponent ],
+      imports: [IndicatorModule]
     })
     .compileComponents();
   });

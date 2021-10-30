@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { IndicatorModule } from '../../indicator.module';
 
 import { IndicatorDetailChartComponent } from './indicator-detail-chart.component';
 
@@ -8,7 +9,8 @@ describe('IndicatorDetailChartComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ IndicatorDetailChartComponent ]
+      declarations: [ IndicatorDetailChartComponent ],
+      imports: [IndicatorModule]
     })
     .compileComponents();
   });
