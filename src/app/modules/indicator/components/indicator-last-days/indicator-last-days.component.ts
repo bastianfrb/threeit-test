@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IIndicatorDetail } from '../../interfaces/indicators';
 
 @Component({
   selector: 'app-indicator-last-days',
@@ -7,7 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IndicatorLastDaysComponent implements OnInit {
 
-  constructor() { }
+  public indicator: IIndicatorDetail;
+
+  public displayedColumns: string[];
+
+  constructor() {
+    this.indicator = {
+      autor: '',
+      codigo: '',
+      nombre: '',
+      serie: [],
+      unidad_medida: '',
+      version: ''
+    };
+
+    this.displayedColumns = ['fecha', 'valor'];
+  }
 
   ngOnInit(): void {
   }
