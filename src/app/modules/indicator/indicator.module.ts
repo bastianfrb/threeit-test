@@ -13,6 +13,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatTableModule } from '@angular/material/table';
 @NgModule({
   declarations: [
     IndicatorDetailComponent,
@@ -31,6 +32,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatDialogModule,
     MatIconModule,
     MatTooltipModule,
+    MatTableModule,
   ],
 })
 export class IndicatorModule { }
