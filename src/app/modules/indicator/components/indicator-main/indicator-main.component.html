@@ -11,8 +11,10 @@
                 </mat-card-title>
     
                 <mat-card-subtitle>
-                    en {{ indicator.unidad_medida }}
+                    en {{ indicator.unidad_medida }} 
+                    <ng-container *ngIf="indicator.detail">al {{ indicator.detail.serie[0].fecha | datePresentation }}</ng-container>
                 </mat-card-subtitle>
+
             </mat-card-header>
             
             <div class="indicator-info">
