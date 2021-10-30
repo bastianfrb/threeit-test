@@ -1,0 +1,11 @@
+@import '../../../../../assets/styles/variables.scss';
+
+.main-layout {
+    overflow: hidden;
+    width: 100%;
+
+    .main-content {
+        height: $content-height;
+        max-height: $content-height;
+    }
+}
