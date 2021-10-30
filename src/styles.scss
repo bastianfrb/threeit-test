@@ -1,4 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
+@import './assets/styles/variables.scss';
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
@@ -11,4 +11,16 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .flex-row {
     display: flex;
     flex-direction: row;
+}
+
+.main-title {
+    color: $white1;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-shadow: 0px 0px 4px $black1;
+}
+
+.main-body {
+    padding: 25px 16%;
 }

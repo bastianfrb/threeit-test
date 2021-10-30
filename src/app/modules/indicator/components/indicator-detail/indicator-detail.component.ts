@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { IIndicatorDetail } from '../../interfaces/indicators';
 
 @Component({
   selector: 'app-indicator-detail',
@@ -7,7 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IndicatorDetailComponent implements OnInit {
 
-  constructor() { }
+  @Input() public indicator: IIndicatorDetail;
+
+  constructor() { 
+    this.indicator = {
+      autor: '',
+      codigo: '',
+      nombre: '',
+      serie: [],
+      unidad_medida: '',
+      version: ''
+    };
+  }
 
   ngOnInit(): void {
   }

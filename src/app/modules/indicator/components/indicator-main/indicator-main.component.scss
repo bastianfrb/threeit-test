@@ -1,0 +1,17 @@
+@import '../../../../../assets/styles/variables.scss';
+
+.indicator-main {
+    background: $turquoise1;
+    min-height: $content-height;
+
+    .indicators-content {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+
+        .indicator-card {
+            margin-bottom: 20px;
+            width: 30%;
+        }
+    }
+}
