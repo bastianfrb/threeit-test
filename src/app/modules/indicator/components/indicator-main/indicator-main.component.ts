@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IIndicatorObject } from '../../interfaces/indicators';
+import { IIndicatorDetail, IIndicatorObject } from '../../interfaces/indicators';
 import { IndicatorService } from '../../services/indicator.service';
 
 @Component({
@@ -28,16 +28,19 @@ export class IndicatorMainComponent implements OnInit {
     this.indicators = await this.indicatorService.getCurrentIndicators();
 
     for (const indicator of this.indicators.data) {
-      indicator.detail = await this.setDetailIndicator(indicator.codigo);
+      const detail = await this.setDetailIndicator(indicator.codigo);
+      indicator.detail = detail || null;
 
-      console.log(indicator.detail);
+      if (indicator.detail) {
+        indicator.detail.serie = indicator.detail.serie.slice(0, 10);
+      }
     }
   }
 
   /**
    * Function to assign detail indicator to indicatorObject
    */
-  private setDetailIndicator(indicatorCode: string): Promise<any> {
+  private setDetailIndicator(indicatorCode: string): Promise<IIndicatorDetail> {
     return this.indicatorService.getIndicatorDetail(indicatorCode);
   }
 
