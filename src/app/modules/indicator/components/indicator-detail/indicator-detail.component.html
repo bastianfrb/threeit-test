@@ -1,11 +1,22 @@
 <div class="indicator-detail" *ngIf="indicator?.serie">
-    <div class="indicator-value">
-        <span *ngIf="indicator.unidad_medida === 'Pesos'">$</span>
-        <span *ngIf="indicator.unidad_medida === 'Dólar'">US$</span>
+    <div class="indicator-value flex-row">
+        <div class="value">
+            <span *ngIf="indicator.unidad_medida === 'Pesos'">$</span>
+            <span *ngIf="indicator.unidad_medida === 'Dólar'">US$</span>
 
-        {{ indicator.serie[0].valor }}
+            {{ indicator.serie[0].valor }}
 
-        <span *ngIf="indicator.unidad_medida === 'Porcentaje'">%</span>
+            <span *ngIf="indicator.unidad_medida === 'Porcentaje'">%</span>
+        </div>
+
+        <div class="last-days">
+            <button mat-icon-button 
+                matTooltip="Ver últimos 10 días"
+                matTooltipPosition="above">
+                <mat-icon>today</mat-icon>
+            </button>
+        </div>
+
     </div>
 
     <div class="indicator-chart">

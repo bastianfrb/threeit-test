@@ -4,20 +4,21 @@ import { IndicatorDetailComponent } from './components/indicator-detail/indicato
 import { IndicatorDetailChartComponent } from './components/indicator-detail-chart/indicator-detail-chart.component';
 import { IndicatorLastDaysComponent } from './components/indicator-last-days/indicator-last-days.component';
 import { IndicatorMainComponent } from './components/indicator-main/indicator-main.component';
-import { IndicatorOptionComponent } from './components/indicator-option/indicator-option.component';
 import { MatCardModule } from '@angular/material/card';
 import { IndicatorRoutingModule } from './indicator-routing.module';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { SharedModule } from '../shared/shared.module';
 import { HighchartsChartModule } from 'highcharts-angular';
-
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTooltipModule } from '@angular/material/tooltip';
 @NgModule({
   declarations: [
     IndicatorDetailComponent,
     IndicatorDetailChartComponent,
     IndicatorLastDaysComponent,
     IndicatorMainComponent,
-    IndicatorOptionComponent
   ],
   imports: [
     CommonModule,
@@ -26,6 +27,10 @@ import { HighchartsChartModule } from 'highcharts-angular';
     MatProgressSpinnerModule,
     SharedModule,
     HighchartsChartModule,
+    MatButtonModule,
+    MatDialogModule,
+    MatIconModule,
+    MatTooltipModule,
   ],
 })
 export class IndicatorModule { }
