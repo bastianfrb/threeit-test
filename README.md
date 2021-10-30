@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is a custom test project made for 3it selection.
+This is a custom test project made for 3IT selection.
 To download this project and test it, please go to the target folder and clone this repository using:
 > git clone https://github.com/bastianfrb/threeit-test.git
 
